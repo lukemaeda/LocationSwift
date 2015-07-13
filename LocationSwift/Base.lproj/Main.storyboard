@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="LocationSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="緯度 0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEt-j7-Dxn">
+                                <rect key="frame" x="66" y="439" width="282" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vsw-4D-SN8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="経度 0:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q15-Ea-1uV">
+                                <rect key="frame" x="66" y="468" width="283" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img03.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ogb-k2-4Wz">
+                                <rect key="frame" x="109" y="218" width="190" height="188"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="iyL-DT-Teg"/>
+                                    <constraint firstAttribute="height" constant="188" id="kIq-7A-d26"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q15-Ea-1uV" firstAttribute="top" secondItem="GEt-j7-Dxn" secondAttribute="bottom" constant="8" symbolic="YES" id="1Tf-wY-iUd"/>
+                            <constraint firstItem="Ogb-k2-4Wz" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="198" id="39v-L4-NV9"/>
+                            <constraint firstItem="GEt-j7-Dxn" firstAttribute="leading" secondItem="q15-Ea-1uV" secondAttribute="leading" id="5Xk-oi-oKa"/>
+                            <constraint firstAttribute="centerX" secondItem="GEt-j7-Dxn" secondAttribute="centerX" id="Vz8-Yx-FFp"/>
+                            <constraint firstItem="Ogb-k2-4Wz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="93" id="ZjP-jr-jm5"/>
+                            <constraint firstAttribute="centerX" secondItem="q15-Ea-1uV" secondAttribute="centerX" id="awU-XW-BcF"/>
+                            <constraint firstItem="GEt-j7-Dxn" firstAttribute="top" secondItem="Ogb-k2-4Wz" secondAttribute="bottom" constant="33" id="hdB-5Z-ENG"/>
+                            <constraint firstItem="GEt-j7-Dxn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="50" id="lzi-LR-3zl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ogb-k2-4Wz" secondAttribute="trailing" constant="99" id="nJu-nH-hGI"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="ivCompass" destination="Ogb-k2-4Wz" id="E68-zo-ZQd"/>
+                        <outletCollection property="lbLatLong" destination="GEt-j7-Dxn" id="u1v-ME-5lt"/>
+                        <outletCollection property="lbLatLong" destination="q15-Ea-1uV" id="g1v-rd-GPr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img03.jpg" width="168" height="170"/>
+    </resources>
+</document>
